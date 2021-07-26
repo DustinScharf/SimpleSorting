@@ -1,5 +1,3 @@
-import java.lang.Thread.*;
-
 /**
  * Stellt einfache interne Steuerfunktionen, die für jeden Algorithmus
  * gleichermaßen gelten zur Verfügung. Alle Sortierklassen implementieren
@@ -12,7 +10,7 @@ class Ablauf extends Thread {
 
     Darstellung ds;
     SortCondition sc;
-    Object a[];
+    Object[] a;
     boolean stopp = false;
 
     /**

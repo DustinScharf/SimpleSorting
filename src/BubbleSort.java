@@ -55,7 +55,7 @@ class BubbleSort extends Ablauf {
         int i, j;
         Object temp;
         for (i = n - 1; i >= 0; i--) {
-            if (stopp == true) break;
+            if (stopp) break;
             zeichne();
             try {
                 sleep(Sort.globalWait);
