@@ -147,11 +147,11 @@ class Sort implements SortCondition {
         ds.zeichintarr = null;
         try {
             int laenge;
-            System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <5000 )");
+            System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <=1_000_000 )");
             String l = erfasse();
             Integer s = new Integer(l);
             laenge = s.intValue();
-            if (laenge >= 5000) {
+            if (laenge > 1_000_000) {
                 System.out.println("der arme Rechner.....");
                 chooseFeldGroesse();
             }
