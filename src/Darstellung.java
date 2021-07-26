@@ -274,23 +274,31 @@ class Darstellung extends PufferDarstellung implements KeyListener {
     public void paint(Graphics g) {
         double skalenEinheitY = 768 / (double) zeichintarr.length;
         double skalenEinheitX = 1024 / (double) zeichintarr.length;
+        double skalenColor = 255 / (double) zeichintarr.length;
         g.setColor(Color.black);
         for (j = 0; j < zeichintarr.length; j++) {
-            if (zeichintarr[j].intValue() != -1) {
+            if (zeichintarr[j] != -1) {
+                if (Sort.colorMode) {
+                    int b = (int) ((skalenColor * zeichintarr.length) - zeichintarr[j] * skalenColor);
+                    int r = 255 - b;
+                    g.setColor(new Color(r, 0, b));
+                }
                 g.drawLine((int) (j * skalenEinheitX),
-                        (int) ((skalenEinheitY * zeichintarr.length) - zeichintarr[j].intValue() * skalenEinheitY),
+                        (int) ((skalenEinheitY * zeichintarr.length) - zeichintarr[j] * skalenEinheitY),
                         (int) (j * skalenEinheitX),
-                        (int) ((skalenEinheitY * zeichintarr.length) - zeichintarr[j].intValue() * skalenEinheitY + 2));
+                        (int) ((skalenEinheitY * zeichintarr.length) - zeichintarr[j] * skalenEinheitY + 2));
             }
         }
-        if ((aktiverAlg == 2) && (laeuft == true)) {
-            g.setColor(Color.blue);
+        if ((aktiverAlg == 2) && (laeuft)) {
+            if (Sort.colorMode) {
+                g.setColor(Color.orange);
+            }
             for (j = 0; j < zeichintarr.length; j++) {
-                if (bucketintarr[j].intValue() != -1) {
+                if (bucketintarr[j] != -1) {
                     g.drawLine((int) (j * skalenEinheitX),
-                            (int) ((skalenEinheitY * zeichintarr.length) - bucketintarr[j].intValue() * skalenEinheitY),
+                            (int) ((skalenEinheitY * zeichintarr.length) - bucketintarr[j] * skalenEinheitY),
                             (int) (j * skalenEinheitX),
-                            (int) ((skalenEinheitY * zeichintarr.length) - bucketintarr[j].intValue() * skalenEinheitY + 2));
+                            (int) ((skalenEinheitY * zeichintarr.length) - bucketintarr[j] * skalenEinheitY + 2));
                 }
             }
         }

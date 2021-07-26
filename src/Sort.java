@@ -93,6 +93,8 @@ class Sort implements SortCondition {
 
     public static int elementAnzahl = 1000;
 
+    public static boolean colorMode = true;
+
     /**
      * Implementierung der Funktion aus der Schnittstelle SortCondition,
      * vergleicht zwei Objekte nach ihrem Integer-Wert.
@@ -144,19 +146,25 @@ class Sort implements SortCondition {
         System.out.println("10 -> Radixsort");
         System.out.println("===========================");
         System.out.println("-1 -> Anzahl Sortierelemente ändern (" + elementAnzahl + ")");
+        System.out.println("-2 -> Farbmodus " + (colorMode ? "de" : "") + "aktivieren " +
+                "(" + (colorMode ? "an" : "aus") + ")");
         System.out.println("===========================");
         System.out.println("0 -> Beenden");
         System.out.println("===========================");
         String sel = erfasse();
         if (
                 (sel.equals("-1") == false)
-                && (sel.equals("0") == false)
-                && (sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
-                && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
-                && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)
-                && (sel.equals("10") == false)
+                        && (sel.equals("0") == false)
+                        && (sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
+                        && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
+                        && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)
+                        && (sel.equals("10") == false)
         ) {
-            System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
+            if (sel.equals("-2")) {
+                colorMode = !colorMode;
+            } else {
+                System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
+            }
             return chooseFunktion();
         }
         Integer s = new Integer(sel);
