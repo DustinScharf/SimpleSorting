@@ -22,50 +22,68 @@ class Sort implements SortCondition {
     QuickSort qs;
     MergeSort ms;
     CocktailSort cs;
+    RadixSort rs;
+
     /**
      * Verzögerungszeit bei Visualisierung von Bubblesort
      */
     long bsWait = 100;
+
     /**
      * Verzögerungszeit bei Visualisierung von Bucket Sort
      */
     long bksWait = 50;
+
     /**
      * Verzögerungszeit bei Visualisierung von Insertion Sort
      */
     long isWait = 50;
+
     /**
      * Verzögerungszeit bei Visualisierung von Selection Sort
      */
     long sesWait = 50;
+
     /**
      * Verzögerungszeit bei Visualisierung von Shell Sort
      */
     long shsWait = 50;
+
     /**
      * Verzögerungszeit bei Visualisierung von Heapsort
      */
     long hsWait = 10;
+
     /**
      * Verzögerungszeit bei Visualisierung von Quicksort
      */
     long qsWait = 100;
+
     /**
      * Verzögerungszeit bei Visualisierung von Mergesort
      */
     long msWait = 100;
+
     /**
      * Verzögerungszeit bei Visualisierung von Cocktail Sort
      */
     long csWait = 100;
+
+    /**
+     * Verzögerungszeit bei Visualisierung von Radix Sort
+     */
+    long rsWait = 200;
+
     /**
      * Originalarray des Sortierfeldes
      */
     Integer[] intarr;
+
     /**
      * Zeichen-Array des Sortierfeldes
      */
     Integer[] zeichintarr;
+
     /**
      * gemessene Sortierzeit
      */
@@ -123,16 +141,21 @@ class Sort implements SortCondition {
         System.out.println("7 -> Selectionsort");
         System.out.println("8 -> Shellsort");
         System.out.println("9 -> Cocktailsort");
+        System.out.println("10 -> Radixsort");
         System.out.println("===========================");
         System.out.println("-1 -> Anzahl Sortierelemente ändern (" + elementAnzahl + ")");
         System.out.println("===========================");
         System.out.println("0 -> Beenden");
         System.out.println("===========================");
         String sel = erfasse();
-        if ((sel.equals("-1") == false) && (sel.equals("0") == false)
+        if (
+                (sel.equals("-1") == false)
+                && (sel.equals("0") == false)
                 && (sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
                 && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
-                && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)) {
+                && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)
+                && (sel.equals("10") == false)
+        ) {
             System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
             return chooseFunktion();
         }
@@ -227,6 +250,11 @@ class Sort implements SortCondition {
                 cs.totalCocktailSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
+            case 10:
+                zeit = System.currentTimeMillis();
+                rs.totalRadixSort(this, (Object[]) intarr, (int) intarr.length);
+                zeit = System.currentTimeMillis() - zeit;
+                break;
         }
         ds.zeit = zeit;
     }
@@ -242,7 +270,6 @@ class Sort implements SortCondition {
             intarr[i] = new Integer((int) (intarr.length * Math.random()));
             zeichintarr[i] = intarr[i];
             ds.zeichintarr[i] = intarr[i];
-
         }
     }
 
@@ -379,6 +406,16 @@ class Sort implements SortCondition {
                     s.cs.sc = s;
                     s.cs.a = (Object[]) s.zeichintarr;
                     s.cs.n = (int) s.zeichintarr.length;
+                    break;
+                case 10:
+                    s.rs = new RadixSort(s.ds, s.rsWait);
+                    s.messeZeit(auswahl);
+                    s.ds.rs = s.rs;
+                    s.ds.setTitle("Radixsort" + s.erstelleUeberschrift());
+                    s.ds.repaint();
+                    s.rs.sc = s;
+                    s.rs.a = (Object[]) s.zeichintarr;
+                    s.rs.n = (int) s.zeichintarr.length;
                     break;
             }
         }
