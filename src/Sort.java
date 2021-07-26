@@ -179,7 +179,8 @@ class Sort implements SortCondition {
     private void chooseFeldGroesse(byte auswahl) {
         try {
             if (auswahl == -1) {
-                System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <=1_000_000 )");
+                System.out.println("\nWie viele Elemente sollen sortiert werden? (Max. 1_000_000)");
+                System.out.println("*größere Werte können zu Anzeigefehlern führen");
                 String l = erfasse();
                 Integer s = new Integer(l);
                 elementAnzahl = s.intValue();
