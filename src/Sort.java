@@ -94,6 +94,7 @@ class Sort implements SortCondition {
     public static int elementAnzahl = 1000;
 
     public static boolean colorMode = true;
+    public static boolean darkMode = false;
 
     /**
      * Implementierung der Funktion aus der Schnittstelle SortCondition,
@@ -148,6 +149,8 @@ class Sort implements SortCondition {
         System.out.println("-1 -> Anzahl Sortierelemente ändern (" + elementAnzahl + ")");
         System.out.println("-2 -> Farbmodus " + (colorMode ? "de" : "") + "aktivieren " +
                 "(" + (colorMode ? "an" : "aus") + ")");
+        System.out.println("-3 -> Darkmode " + (darkMode ? "de" : "") + "aktivieren " +
+                "(" + (darkMode ? "an" : "aus") + ")");
         System.out.println("===========================");
         System.out.println("0 -> Beenden");
         System.out.println("===========================");
@@ -162,6 +165,8 @@ class Sort implements SortCondition {
         ) {
             if (sel.equals("-2")) {
                 colorMode = !colorMode;
+            } else if (sel.equals("-3")) {
+                darkMode = !darkMode;
             } else {
                 System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
             }

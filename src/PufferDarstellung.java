@@ -18,11 +18,15 @@ class PufferDarstellung extends Frame {
             dbGraphics = dbImage.getGraphics();
         }
         //Hintergrund löschen
-        dbGraphics.setColor(getBackground());
+        if (Sort.darkMode) {
+            dbGraphics.setColor(Color.black);
+        } else {
+            dbGraphics.setColor(getBackground());
+        }
         dbGraphics.fillRect(0, 0, this.getSize().width, this.getSize().height);
 
         //Vordergrund zeichnen
-        dbGraphics.setColor(getForeground());
+        dbGraphics.setColor(Color.blue);
         paint(dbGraphics);
         //Offscreen anzeigen
         g.drawImage(dbImage, 0, 0, this);
