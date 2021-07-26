@@ -78,7 +78,7 @@ class Sort implements SortCondition {
      * vergleicht zwei Objekte nach ihrem Integer-Wert.
      *
      * @param o1 - erstes zu vergleichendes Objekt
-     * @param o2 - zweites Onjekt
+     * @param o2 - zweites Objekt
      * @return true, falls o1 kleiner als o2
      */
     public boolean isGreaterThan(Object o1, Object o2) {
