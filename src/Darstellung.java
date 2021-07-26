@@ -49,6 +49,7 @@ class Darstellung extends PufferDarstellung implements KeyListener {
     HeapSort hs;
     QuickSort qs;
     MergeSort ms;
+    CocktailSort cs;
     Sort s;
 
     Darstellung() {
@@ -94,6 +95,9 @@ class Darstellung extends PufferDarstellung implements KeyListener {
             case 8:
                 shs.start();
                 break;
+            case 9:
+                cs.start();
+                break;
         }
     }
 
@@ -126,6 +130,9 @@ class Darstellung extends PufferDarstellung implements KeyListener {
             case 8:
                 shs.suspend();
                 break;
+            case 9:
+                cs.suspend();
+                break;
         }
     }
 
@@ -157,6 +164,9 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                 break;
             case 8:
                 shs.resume();
+                break;
+            case 9:
+                cs.resume();
                 break;
         }
     }
@@ -197,6 +207,10 @@ class Darstellung extends PufferDarstellung implements KeyListener {
             case 8:
                 shs.resume();
                 shs.stopp = true;
+                break;
+            case 9:
+                cs.resume();
+                cs.stopp = true;
                 break;
         }
     }

@@ -21,6 +21,7 @@ class Sort implements SortCondition {
     HeapSort hs;
     QuickSort qs;
     MergeSort ms;
+    CocktailSort cs;
     /**
      * Verzögerungszeit bei Visualisierung von Bubblesort
      */
@@ -53,6 +54,10 @@ class Sort implements SortCondition {
      * Verzögerungszeit bei Visualisierung von Mergesort
      */
     long msWait = 100;
+    /**
+     * Verzögerungszeit bei Visualisierung von Cocktail Sort
+     */
+    long csWait = 100;
     /**
      * Originalarray des Sortierfeldes
      */
@@ -113,11 +118,13 @@ class Sort implements SortCondition {
         System.out.println("6 -> Quicksort");
         System.out.println("7 -> Selectionsort");
         System.out.println("8 -> Shellsort");
+        System.out.println("9 -> Cocktailsort");
         System.out.println("===========================");
-        System.out.println("9 -> Beenden");
+        System.out.println("0 -> Beenden");
         System.out.println("===========================");
         String sel = erfasse();
-        if ((sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
+        if ((sel.equals("0") == false)
+                && (sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
                 && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
                 && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)) {
             System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
@@ -203,6 +210,11 @@ class Sort implements SortCondition {
                 shs.totalShellSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
+            case 9:
+                zeit = System.currentTimeMillis();
+                cs.totalCocktailSort(this, (Object[]) intarr, (int) intarr.length);
+                zeit = System.currentTimeMillis() - zeit;
+                break;
         }
         ds.zeit = zeit;
     }
@@ -248,7 +260,7 @@ class Sort implements SortCondition {
 
         while (true) {
             auswahl = chooseFunktion();
-            if (auswahl == 9) System.exit(0);
+            if (auswahl == 0) System.exit(0);
             s.chooseFeldGroesse();
             s.erstelleFeld();
             s.ds.aktiverAlg = auswahl;
@@ -335,6 +347,16 @@ class Sort implements SortCondition {
                     s.shs.sc = s;
                     s.shs.a = (Object[]) s.zeichintarr;
                     s.shs.n = (int) s.zeichintarr.length;
+                    break;
+                case 9:
+                    s.cs = new CocktailSort(s.ds, s.csWait);
+                    s.messeZeit(auswahl);
+                    s.ds.cs = s.cs;
+                    s.ds.setTitle("Cocktailsort" + s.erstelleUeberschrift());
+                    s.ds.repaint();
+                    s.cs.sc = s;
+                    s.cs.a = (Object[]) s.zeichintarr;
+                    s.cs.n = (int) s.zeichintarr.length;
                     break;
             }
         }
