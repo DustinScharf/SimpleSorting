@@ -73,6 +73,8 @@ class Sort implements SortCondition {
 
     public static long globalWait = 100;
 
+    public static int elementAnzahl = 1000;
+
     /**
      * Implementierung der Funktion aus der Schnittstelle SortCondition,
      * vergleicht zwei Objekte nach ihrem Integer-Wert.
@@ -122,10 +124,12 @@ class Sort implements SortCondition {
         System.out.println("8 -> Shellsort");
         System.out.println("9 -> Cocktailsort");
         System.out.println("===========================");
+        System.out.println("-1 -> Anzahl Sortierelemente ändern (" + elementAnzahl + ")");
+        System.out.println("===========================");
         System.out.println("0 -> Beenden");
         System.out.println("===========================");
         String sel = erfasse();
-        if ((sel.equals("0") == false)
+        if ((sel.equals("-1") == false) && (sel.equals("0") == false)
                 && (sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
                 && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
                 && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)) {
@@ -141,27 +145,33 @@ class Sort implements SortCondition {
     /**
      * Erfragt die gewünschte Feldgröße beim Benutzer
      */
-    private void chooseFeldGroesse() {
+    private void chooseFeldGroesse(byte auswahl) {
+        try {
+            if (auswahl == -1) {
+                System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <=1_000_000 )");
+                String l = erfasse();
+                Integer s = new Integer(l);
+                elementAnzahl = s.intValue();
+                if (elementAnzahl > 1_000_000) {
+                    System.out.println("der arme Rechner.....");
+                    chooseFeldGroesse(auswahl);
+                }
+            }
+            initFeld(elementAnzahl);
+        } catch (NumberFormatException e) {
+            System.out.println("bitte nur numerische Eingaben...");
+            chooseFeldGroesse(auswahl);
+        }
+    }
+
+    private void initFeld(int len) {
         intarr = null;
         zeichintarr = null;
         ds.zeichintarr = null;
-        try {
-            int laenge;
-            System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <=1_000_000 )");
-            String l = erfasse();
-            Integer s = new Integer(l);
-            laenge = s.intValue();
-            if (laenge > 1_000_000) {
-                System.out.println("der arme Rechner.....");
-                chooseFeldGroesse();
-            }
-            intarr = new Integer[laenge];
-            zeichintarr = new Integer[laenge];
-            ds.zeichintarr = new Integer[laenge];
-        } catch (NumberFormatException e) {
-            System.out.println("bitte nur numerische Eingaben...");
-            chooseFeldGroesse();
-        }
+
+        intarr = new Integer[len];
+        zeichintarr = new Integer[len];
+        ds.zeichintarr = new Integer[len];
     }
 
     /**
@@ -272,7 +282,8 @@ class Sort implements SortCondition {
         while (true) {
             auswahl = chooseFunktion();
             if (auswahl == 0) System.exit(0);
-            s.chooseFeldGroesse();
+            s.chooseFeldGroesse(auswahl);
+            if (auswahl == -1) continue;
             s.erstelleFeld();
             s.ds.aktiverAlg = auswahl;
             s.ds.setVisible(true);
