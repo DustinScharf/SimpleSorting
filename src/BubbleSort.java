@@ -48,7 +48,7 @@ class BubbleSort extends Ablauf {
 
 
     /**
-     * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
+     * Algorithmus als run-Methode, um ihn steuerbar zu machen und um
      * zu zeichnen
      */
     public void run() {
