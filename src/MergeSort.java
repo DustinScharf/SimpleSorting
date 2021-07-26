@@ -46,7 +46,7 @@ public class MergeSort extends Ablauf {
         for (int i = 0; i < length; i++) {
             if (m2 <= hi - lo)
                 if (m1 <= pivot - lo)
-                    if (sc.isGreaterThan(working[m2], working[m1])) a[i + lo] = working[m2++];
+                    if (sc.isLessThan(working[m2], working[m1])) a[i + lo] = working[m2++];
                     else a[i + lo] = working[m1++];
                 else a[i + lo] = working[m2++];
             else a[i + lo] = working[m1++];
@@ -84,7 +84,7 @@ public class MergeSort extends Ablauf {
             for (int i = 0; i < length; i++) {
                 if (m2 <= hi - lo)
                     if (m1 <= pivot - lo)
-                        if (sc.isGreaterThan(working[m2], working[m1]))
+                        if (sc.isLessThan(working[m2], working[m1]))
                             a[i + lo] = working[m2++];
                         else a[i + lo] = working[m1++];
                     else a[i + lo] = working[m2++];

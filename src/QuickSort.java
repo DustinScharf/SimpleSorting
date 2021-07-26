@@ -1,5 +1,3 @@
-import java.awt.*;
-import java.applet.*;
 import java.lang.*;
 
 /**
@@ -79,11 +77,11 @@ public class QuickSort extends Ablauf {
         do {
             do {// von links suchen
                 i = i + 1;
-            } while (sc.isGreaterThan(a[i], v));
+            } while (sc.isLessThan(a[i], v));
             do { //von rechts suchen
                 j = j - 1;
                 if (j == 0) break;
-            } while (sc.isGreaterThan(v, a[j]));
+            } while (sc.isLessThan(v, a[j]));
             // linkes und rechtes Element tauschen
             u = a[i];
             a[i] = a[j];

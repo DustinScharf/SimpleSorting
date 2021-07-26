@@ -1,5 +1,3 @@
-import java.awt.*;
-
 /**
  * Klasse beinhaltet zwei verschiedene Bucket Sort Implementierungen.
  *
@@ -38,9 +36,9 @@ public class BucketSort extends Ablauf {
         Integer min = (Integer) a[0];
         Integer max = min;
         for (int i = 1; i < N; i++)// Find the minimum and maximum
-            if (sc.isGreaterThan(max, a[i]))
+            if (sc.isLessThan(max, a[i]))
                 max = (Integer) a[i];
-            else if (sc.isGreaterThan(a[i], min))
+            else if (sc.isLessThan(a[i], min))
                 min = (Integer) a[i];
 
         int bucket[] = new int[max.intValue() - min.intValue() + 1];// Create buckets
@@ -72,9 +70,9 @@ public class BucketSort extends Ablauf {
         Integer min = (Integer) a[0];
         Integer max = min;
         for (int i = 1; i < N; i++) // Find the minimum and maximum
-            if (sc.isGreaterThan(max, a[i]))
+            if (sc.isLessThan(max, a[i]))
                 max = (Integer) a[i];
-            else if (sc.isGreaterThan(a[i], min))
+            else if (sc.isLessThan(a[i], min))
                 min = (Integer) a[i];
 
         int bucket[] = new int[max.intValue() - min.intValue() + 1];// Create buckets

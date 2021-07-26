@@ -36,7 +36,7 @@ public class InsertionSort extends Ablauf {
         for (i = 1; i < n; i++) {
             elem = a[i];
             j = i;
-            while (sc.isGreaterThan(elem, a[j - 1])) {
+            while (sc.isLessThan(elem, a[j - 1])) {
                 a[j] = a[j - 1];
                 j = j - 1;
                 if (j == 0) break;
@@ -65,7 +65,7 @@ public class InsertionSort extends Ablauf {
 
             elem = a[i];
             j = i;
-            while (sc.isGreaterThan(elem, a[j - 1])) {
+            while (sc.isLessThan(elem, a[j - 1])) {
                 a[j] = a[j - 1];
                 j = j - 1;
                 if (j == 0) break;

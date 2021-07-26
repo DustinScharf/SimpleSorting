@@ -41,7 +41,7 @@ public class ShellSort extends Ablauf {
             for (i = delta; i < n; i++) {
                 elem = a[i];
                 j = i;
-                while (sc.isGreaterThan(elem, a[j - delta])) {
+                while (sc.isLessThan(elem, a[j - delta])) {
                     a[j] = a[j - delta];
                     j = j - delta;
                     if (j < delta) break;
@@ -85,7 +85,7 @@ public class ShellSort extends Ablauf {
                 }
                 elem = a[i];
                 j = i;
-                while (sc.isGreaterThan(elem, a[j - delta])) {
+                while (sc.isLessThan(elem, a[j - delta])) {
                     a[j] = a[j - delta];
                     j = j - delta;
                     if (j < delta) break;

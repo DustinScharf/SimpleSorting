@@ -116,9 +116,9 @@ public class HeapSort extends Ablauf {
         while (k <= n / 2) {
             j = k + k;
             if (j < n) {
-                if (sc.isGreaterThan(a[j], a[j + 1])) j = j + 1;
+                if (sc.isLessThan(a[j], a[j + 1])) j = j + 1;
             }
-            if (!sc.isGreaterThan(t, a[j])) break;
+            if (!sc.isLessThan(t, a[j])) break;
             a[k] = a[j];
             k = j;
         }

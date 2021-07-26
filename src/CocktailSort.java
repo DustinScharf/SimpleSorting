@@ -34,7 +34,7 @@ class CocktailSort extends Ablauf {
             boolean swapped = false;
             ++begin;
             for (int i = begin; i <= end; ++i) {
-                if (sc.isGreaterThan(a[i + 1], a[i])) {
+                if (sc.isLessThan(a[i + 1], a[i])) {
                     Object temp = a[i + 1];
                     a[i + 1] = a[i];
                     a[i] = temp;
@@ -47,7 +47,7 @@ class CocktailSort extends Ablauf {
             swapped = false;
             --end;
             for (int i = end; i >= begin; --i) {
-                if (sc.isGreaterThan(a[i + 1], a[i])) {
+                if (sc.isLessThan(a[i + 1], a[i])) {
                     Object temp = a[i + 1];
                     a[i + 1] = a[i];
                     a[i] = temp;
@@ -82,7 +82,7 @@ class CocktailSort extends Ablauf {
             boolean swapped = false;
             ++begin;
             for (int i = begin; i <= end; ++i) {
-                if (sc.isGreaterThan(a[i + 1], a[i])) {
+                if (sc.isLessThan(a[i + 1], a[i])) {
                     Object temp = a[i + 1];
                     a[i + 1] = a[i];
                     a[i] = temp;
@@ -95,7 +95,7 @@ class CocktailSort extends Ablauf {
             swapped = false;
             --end;
             for (int i = end; i >= begin; --i) {
-                if (sc.isGreaterThan(a[i + 1], a[i])) {
+                if (sc.isLessThan(a[i + 1], a[i])) {
                     Object temp = a[i + 1];
                     a[i + 1] = a[i];
                     a[i] = temp;

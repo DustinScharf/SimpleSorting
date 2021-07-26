@@ -103,7 +103,7 @@ class Sort implements SortCondition {
      * @param o2 - zweites Objekt
      * @return true, falls o1 kleiner als o2
      */
-    public boolean isGreaterThan(Object o1, Object o2) {
+    public boolean isLessThan(Object o1, Object o2) {
         Integer i1 = (Integer) o1;
         Integer i2 = (Integer) o2;
         return (i1.intValue() < i2.intValue());

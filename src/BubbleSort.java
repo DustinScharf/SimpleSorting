@@ -35,7 +35,7 @@ class BubbleSort extends Ablauf {
         for (i = n - 1; i >= 0; i--) {// AND unstable
             for (j = 0; j < i; j++) {        // unstable = false
 
-                if (sc.isGreaterThan(a[j + 1], a[j])) {
+                if (sc.isLessThan(a[j + 1], a[j])) {
                     temp = a[j + 1];            // unstable = true
                     a[j + 1] = a[j];
                     a[j] = temp;
@@ -64,7 +64,7 @@ class BubbleSort extends Ablauf {
                 setzeZurueck();
             }
             for (j = 0; j < i; j++) {
-                if (sc.isGreaterThan(a[j + 1], a[j])) {
+                if (sc.isLessThan(a[j + 1], a[j])) {
                     temp = a[j + 1];
                     a[j + 1] = a[j];
                     a[j] = temp;

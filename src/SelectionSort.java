@@ -38,7 +38,7 @@ public class SelectionSort extends Ablauf {
 
             min = i;
             for (j = i + 1; j < a.length; j++) {
-                if (sc.isGreaterThan(a[j], a[min])) {
+                if (sc.isLessThan(a[j], a[min])) {
                     min = j;
                 } // if
             } // for
@@ -70,7 +70,7 @@ public class SelectionSort extends Ablauf {
             } // catch
             min = i;
             for (j = i + 1; j < a.length; j++) {
-                if (sc.isGreaterThan(a[j], a[min])) min = j;
+                if (sc.isLessThan(a[j], a[min])) min = j;
             } // for
             elem = a[min];
             a[min] = a[i];
