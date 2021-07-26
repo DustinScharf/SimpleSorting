@@ -1,7 +1,7 @@
 import java.awt.*;
 
 /**
- * Entflimmerung der Visualisierung durch Doppelpufferung
+ * Antiflimmern der Visualisierung durch Doppelpufferung
  *
  * @author Jan Rudert
  * @version 1.0 04.02.01
@@ -17,7 +17,7 @@ class PufferDarstellung extends Frame {
             dbImage = createImage(this.getSize().width, this.getSize().height);
             dbGraphics = dbImage.getGraphics();
         }
-        //Hintergrund loeschen
+        //Hintergrund löschen
         dbGraphics.setColor(getBackground());
         dbGraphics.fillRect(0, 0, this.getSize().width, this.getSize().height);
 

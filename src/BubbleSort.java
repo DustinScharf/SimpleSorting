@@ -12,8 +12,8 @@ class BubbleSort extends Ablauf {
     private long wait;
 
     /**
-     * @param ds   - Referenz zu Darstellung fuer die Zeichnung
-     * @param wait - Verzoegerungszeit beim Zeichnen
+     * @param ds   - Referenz zu Darstellung für die Zeichnung
+     * @param wait - Verzögerungszeit beim Zeichnen
      */
     BubbleSort(Darstellung ds, long wait) {
         this.ds = ds;
@@ -22,7 +22,7 @@ class BubbleSort extends Ablauf {
 
 
     /**
-     * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
+     * der "pure" Algorithmus, aufgerufen um seine Laufzeit zu messen
      *
      * @param sc - Schnittstelle SortCondition zum Vergleich von Elementen
      * @param a  - zu sortierendes Feld

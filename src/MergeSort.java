@@ -16,8 +16,8 @@ public class MergeSort extends Ablauf {
     private long wait2;
 
     /**
-     * @param ds   - Referenz zu Darstellung fuer die Zeichnung
-     * @param wait - Verzoegerungszeit beim Zeichnen
+     * @param ds   - Referenz zu Darstellung für die Zeichnung
+     * @param wait - Verzögerungszeit beim Zeichnen
      */
     MergeSort(Darstellung ds, long wait) {
         this.ds = ds;
@@ -26,12 +26,12 @@ public class MergeSort extends Ablauf {
     }
 
     /**
-     * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
+     * der "pure" Algorithmus, aufgerufen um seine Laufzeit zu messen
      *
      * @param sc - Schnittstelle SortCondition zum Vergleich von Elementen
      * @param a  - zu sortierendes Feld
      * @param lo - erstes Element im Feld
-     * @param hi - letzes Element im feld
+     * @param hi - letztes Element im feld
      */
     public void totalMergeSort(SortCondition sc, Object a[], int lo, int hi) {
         if (lo == hi) return;
@@ -54,7 +54,7 @@ public class MergeSort extends Ablauf {
     }
 
     /**
-     * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
+     * Algorithmus als run-Methode, um ihn steuerbar zu machen und um
      * zu zeichnen
      */
     public void run() {

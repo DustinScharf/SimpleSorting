@@ -14,8 +14,8 @@ public class HeapSort extends Ablauf {
     private long wait;
 
     /**
-     * @param ds   - Referenz zu Darstellung fuer die Zeichnung
-     * @param wait - Verzoegerungszeit beim Zeichnen
+     * @param ds   - Referenz zu Darstellung für die Zeichnung
+     * @param wait - Verzögerungszeit beim Zeichnen
      */
     HeapSort(Darstellung ds, long wait) {
         this.ds = ds;
@@ -24,7 +24,7 @@ public class HeapSort extends Ablauf {
 
 
     /**
-     * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
+     * der "pure" Algorithmus, aufgerufen um seine Laufzeit zu messen
      *
      * @param sc  - Schnittstelle SortCondition zum Vergleich von Elementen
      * @param a   - zu sortierendes Feld
@@ -39,7 +39,7 @@ public class HeapSort extends Ablauf {
         m = anz - 1;
         n = m;
 
-        //Heap konstuieren
+        //Heap konstruieren
         for (k = m / 2; k >= 0; k--) {
             DownHeap(sc, k, n, a);
         }
@@ -57,7 +57,7 @@ public class HeapSort extends Ablauf {
 
 
     /**
-     * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
+     * Algorithmus als run-Methode, um ihn steuerbar zu machen und um
      * zu zeichnen
      */
     public void run() {

@@ -3,7 +3,7 @@
 import java.lang.*;
 
 /**
- * Klasse beinhaltet zwei verschiedene Shellsort-Implementierungen.
+ * Klasse beinhaltet zwei verschiedene Shell Sort Implementierungen.
  *
  * @author Jan Rudert
  * @version 1.0 04.02.01
@@ -14,8 +14,8 @@ public class ShellSort extends Ablauf {
     private long wait;
 
     /**
-     * @param ds   - Referenz zu Darstellung fuer die Zeichnung
-     * @param wait - Verzoegerungszeit beim Zeichnen
+     * @param ds   - Referenz zu Darstellung für die Zeichnung
+     * @param wait - Verzögerungszeit beim Zeichnen
      */
     ShellSort(Darstellung ds, long wait) {
         this.ds = ds;
@@ -23,7 +23,7 @@ public class ShellSort extends Ablauf {
     }
 
     /**
-     * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
+     * der "pure" Algorithmus, aufgerufen um seine Laufzeit zu messen
      *
      * @param sc - Schnittstelle SortCondition zum Vergleich von Elementen
      * @param a  - zu sortierendes Feld
@@ -61,7 +61,7 @@ public class ShellSort extends Ablauf {
     }
 
     /**
-     * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
+     * Algorithmus als run-Methode, um ihn steuerbar zu machen und um
      * zu zeichnen
      */
     public void run() {

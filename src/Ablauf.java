@@ -1,9 +1,9 @@
 import java.lang.Thread.*;
 
 /**
- * Stellt einfache interne Steuerfunktionen, die fuer jeden Algorithmus
- * gleichermassen gelten zur Verfuegung. Alle Sortierklassen implementieren
- * run()-Methoden, die das Zeichnen der Sorieralgorithmen steuern.
+ * Stellt einfache interne Steuerfunktionen, die für jeden Algorithmus
+ * gleichermaßen gelten zur Verfügung. Alle Sortierklassen implementieren
+ * run()-Methoden, die das Zeichnen der Sortieralgorithmen steuern.
  *
  * @author Jan Rudert
  * @version 1.0 04.02.01
@@ -16,7 +16,7 @@ class Ablauf extends Thread {
     boolean stopp = false;
 
     /**
-     * uebergibt das zu zeichnende Array an die Fensterklasse und ruft dort paint() auf
+     * übergibt das zu zeichnende Array an die Fensterklasse und ruft dort paint() auf
      */
     protected void zeichne() {
         ds.zeichintarr = (Integer[]) a;
@@ -25,7 +25,7 @@ class Ablauf extends Thread {
 
     /**
      * Nach Beendigung oder Abbruch des Sortierverfahrens aufgerufen, um eventuellen
-     * Neustart zu ermoeglichen. (Zuruecksetzen verschiedener Variablen)
+     * Neustart zu ermöglichen. (Zurücksetzen verschiedener Variablen)
      */
     protected void setzeZurueck() {
         ds.fertig = true;

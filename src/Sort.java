@@ -1,9 +1,9 @@
 import java.io.*;
 
 /**
- * Die Klasse Sort steuert die Hauptfunktionalitaet des Sortierprogramms. Sie
+ * Die Klasse Sort steuert die Hauptfunktionalität des Sortierprogramms. Sie
  * beinhaltet alle verwendeten Algorithmen in gesonderten Klassen. Sie stellt
- * ein Auswahlmenu zur Verfuegung und ruft nach Auswahl eines Sortieralgorithmus`
+ * ein Auswahlmenü zur Verfügung und ruft nach Auswahl eines Sortieralgorithmus`
  * dessen grafische darstellung auf.
  *
  * @author Jan Rudert
@@ -22,35 +22,35 @@ class Sort implements SortCondition {
     QuickSort qs;
     MergeSort ms;
     /**
-     * Verzoegerungszeit bei Visualisierung von Bubblesort
+     * Verzögerungszeit bei Visualisierung von Bubblesort
      */
     long bsWait = 100;
     /**
-     * Verzoegerungszeit bei Visualisierung von Bucketsort
+     * Verzögerungszeit bei Visualisierung von Bucket Sort
      */
     long bksWait = 50;
     /**
-     * Verzoegerungszeit bei Visualisierung von Insertionsort
+     * Verzögerungszeit bei Visualisierung von Insertion Sort
      */
     long isWait = 50;
     /**
-     * Verzoegerungszeit bei Visualisierung von Selectionsort
+     * Verzögerungszeit bei Visualisierung von Selection Sort
      */
     long sesWait = 50;
     /**
-     * Verzoegerungszeit bei Visualisierung von Shellsort
+     * Verzögerungszeit bei Visualisierung von Shell Sort
      */
     long shsWait = 50;
     /**
-     * Verzoegerungszeit bei Visualisierung von Heapsort
+     * Verzögerungszeit bei Visualisierung von Heapsort
      */
     long hsWait = 10;
     /**
-     * Verzoegerungszeit bei Visualisierung von Quicksort
+     * Verzögerungszeit bei Visualisierung von Quicksort
      */
     long qsWait = 100;
     /**
-     * Verzoegerungszeit bei Visualisierung von Mergesort
+     * Verzögerungszeit bei Visualisierung von Mergesort
      */
     long msWait = 100;
     /**
@@ -98,7 +98,7 @@ class Sort implements SortCondition {
      * Zeigt ein kleines Menu zur Auswahl des Sortieralgorithmus' an und
      * kontrolliert die eingabe.
      *
-     * @return die Nummer des gewaehlten Algorithmus
+     * @return die Nummer des gewählten Algorithmus
      */
     private static byte chooseFunktion() {
 
@@ -120,7 +120,7 @@ class Sort implements SortCondition {
         if ((sel.equals("1") == false) && (sel.equals("2") == false) && (sel.equals("3") == false)
                 && (sel.equals("4") == false) && (sel.equals("5") == false) && (sel.equals("6") == false)
                 && (sel.equals("7") == false) && (sel.equals("8") == false) && (sel.equals("9") == false)) {
-            System.out.println("Bitte eine der gegebenen Moeglichkeiten auswaehlen!");
+            System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
             return chooseFunktion();
         }
         Integer s = new Integer(sel);
@@ -130,7 +130,7 @@ class Sort implements SortCondition {
     }
 
     /**
-     * Erfragt die gewuenschte Feldgroesse beim Benutzer
+     * Erfragt die gewünschte Feldgröße beim Benutzer
      */
     private void chooseFeldGroesse() {
         intarr = null;
@@ -138,7 +138,7 @@ class Sort implements SortCondition {
         ds.zeichintarr = null;
         try {
             int laenge;
-            System.out.println("\nWieviele Elemente soll das zu sortierende Feld besitzen?( <5000 )");
+            System.out.println("\nWie viele Elemente soll das zu sortierende Feld besitzen?( <5000 )");
             String l = erfasse();
             Integer s = new Integer(l);
             laenge = s.intValue();
@@ -156,10 +156,10 @@ class Sort implements SortCondition {
     }
 
     /**
-     * Misst die Zeit, die ein Algorithmus zur Ausfuehrung OHNE Visualisierung
-     * benoetigt.
+     * Misst die Zeit, die ein Algorithmus zur Ausführung OHNE Visualisierung
+     * benötigt.
      *
-     * @param auswahl - die Nummer des gewaehlten Algorithmus
+     * @param auswahl - die Nummer des gewählten Algorithmus
      */
     private void messeZeit(byte auswahl) {
         switch (auswahl) {
@@ -208,7 +208,7 @@ class Sort implements SortCondition {
     }
 
     /**
-     * Erstellt ein Feld der gewuenschten Groesse mit Hilfe des java-internen
+     * Erstellt ein Feld der gewünschten Größe mit Hilfe des java-internen
      * Zufallsgenerators.
      */
     private void erstelleFeld() {
@@ -234,7 +234,7 @@ class Sort implements SortCondition {
     }
 
     /**
-     * Startet das Pogramm und startet je nach Benutzerauswahl eine bestimmte
+     * Startet das Programm und startet je nach Benutzerauswahl eine bestimmte
      * Visualisierung.
      */
     public static void main(String arg[]) {

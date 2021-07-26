@@ -2,8 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Fenster - Klasse, die fuer die Visualisierung der Sortieralgorithmen zustaendig ist.
- * Ausserdem nimmt sie Nutzerbefehle in Form von Tasteneingaben oder Mausklicks
+ * Fenster - Klasse, die für die Visualisierung der Sortieralgorithmen zuständig ist.
+ * Außerdem nimmt sie Nutzerbefehle in Form von Tasteneingaben oder Mausklicks
  * entgegen, die die Visualisierung starten, unterbrechen oder beenden.
  *
  * @author Jan Rudert
@@ -12,11 +12,11 @@ import java.awt.event.*;
 class Darstellung extends PufferDarstellung implements KeyListener {
 
     /**
-     * zu zeichnendes Array, vom Sortieverfahren aktualisiert
+     * zu zeichnendes Array, vom Sortierverfahrens aktualisiert
      */
     Integer[] zeichintarr;
     /**
-     * zweites Array bei Bucketsort
+     * zweites Array bei Bucket Sort
      */
     Integer[] bucketintarr;
     int i, j;
@@ -235,7 +235,7 @@ class Darstellung extends PufferDarstellung implements KeyListener {
      * Zeichnet das gesamte Array als schwarze senkrechte Striche auf weissem Grund.
      * Das Array wird vor aufrufen dieser Funktion in dieser Klasse aktualisiert.
      * Berechnet je nach Anzahl der Elemente die Zeichendimensionen.
-     * Sonderfall beim Zeichnen -> Bucketsort. Dort muessen zwei Arrays gleichzeitig
+     * Sonderfall beim Zeichnen -> Bucket Sort. Dort müssen zwei Arrays gleichzeitig
      * dargestellt werden.
      */
     public void paint(Graphics g) {
