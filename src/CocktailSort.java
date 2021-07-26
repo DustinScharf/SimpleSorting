@@ -67,7 +67,11 @@ class CocktailSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         int begin = -1;
         int end = n - 2;

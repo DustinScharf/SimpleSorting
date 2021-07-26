@@ -57,7 +57,11 @@ public class BucketSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         if (N <= 0) return;// Case of empty array
 

@@ -85,7 +85,11 @@ class RadixSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         int longestNumbersDigits = 0;
         for (Object o : a) {

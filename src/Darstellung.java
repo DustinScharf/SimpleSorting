@@ -245,21 +245,25 @@ class Darstellung extends PufferDarstellung implements KeyListener {
         } else if (e.getKeyCode() == KeyEvent.VK_W) {
             Sort.globalWait /= 1.2;
         } else {
-            if (laeuft) {
-                halteSortierungAn();
-                laeuft = false;
-                //System.out.println("Sortierung angehalten...");
+            startStop();
+        }
+    }
+
+    protected void startStop() {
+        if (laeuft) {
+            halteSortierungAn();
+            laeuft = false;
+            //System.out.println("Sortierung angehalten...");
+        } else {
+            if (!gestartet) {
+                starteSortierung();
+                gestartet = true;
+                laeuft = true;
+                //System.out.println("Sortierung wird gestartet...");
             } else {
-                if (!gestartet) {
-                    starteSortierung();
-                    gestartet = true;
-                    laeuft = true;
-                    //System.out.println("Sortierung wird gestartet...");
-                } else {
-                    setzeSortierungFort();
-                    laeuft = true;
-                    //System.out.println("Sortierung laeuft...");
-                }
+                setzeSortierungFort();
+                laeuft = true;
+                //System.out.println("Sortierung laeuft...");
             }
         }
     }

@@ -96,6 +96,8 @@ class Sort implements SortCondition {
     public static boolean colorMode = true;
     public static boolean darkMode = false;
 
+    public static boolean init = false;
+
     /**
      * Implementierung der Funktion aus der Schnittstelle SortCondition,
      * vergleicht zwei Objekte nach ihrem Integer-Wert.
@@ -308,7 +310,6 @@ class Sort implements SortCondition {
         System.out.println("Willkommen bei SimpleSort");
         System.out.println("===========================");
         System.out.println("Anleitung:");
-        System.out.println("- Start mit 2x SPACE");
         System.out.println("- Play/Pause mit SPACE");
         System.out.println("- Geschwindigkeit+ mit W");
         System.out.println("- Geschwindigkeit- mit Q");

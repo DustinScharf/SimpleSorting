@@ -45,7 +45,11 @@ public class QuickSort extends Ablauf {
      */
 
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         zeichneQuickSortRekursiv(sc, a, 0, a.length - 1);
         setzeZurueck();

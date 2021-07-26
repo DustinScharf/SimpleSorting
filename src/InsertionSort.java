@@ -51,7 +51,11 @@ public class InsertionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         int i, j;
         Object elem;

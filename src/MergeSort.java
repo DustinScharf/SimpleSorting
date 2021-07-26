@@ -58,7 +58,11 @@ public class MergeSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         zeichneMergeSort(sc, a, lo, hi);
         setzeZurueck();

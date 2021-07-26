@@ -57,7 +57,11 @@ public class SelectionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
-        suspend();
+        if (Sort.init) {
+            ds.laeuft = false;
+            suspend();
+        }
+        Sort.init = true;
 
         int i, j, min;
         Object elem;
