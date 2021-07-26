@@ -76,7 +76,7 @@ class CocktailSort extends Ablauf {
             if (stopp) break;
             zeichne();
             try {
-                this.sleep(wait);
+                sleep(wait);
             } catch (InterruptedException e) {
                 System.out.println(e.toString());
                 setzeZurueck();
