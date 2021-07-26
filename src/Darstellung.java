@@ -275,7 +275,11 @@ class Darstellung extends PufferDarstellung implements KeyListener {
         double skalenEinheitY = 768 / (double) zeichintarr.length;
         double skalenEinheitX = 1024 / (double) zeichintarr.length;
         double skalenColor = 255 / (double) zeichintarr.length;
-        g.setColor(Color.black);
+        if (Sort.darkMode) {
+            g.setColor(Color.white);
+        } else {
+            g.setColor(Color.black);
+        }
         for (j = 0; j < zeichintarr.length; j++) {
             if (zeichintarr[j] != -1) {
                 if (Sort.colorMode) {
