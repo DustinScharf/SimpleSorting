@@ -241,7 +241,7 @@ class Darstellung extends PufferDarstellung implements KeyListener {
 
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_Q) {
-            Sort.globalWait *= 1.4;
+            Sort.globalWait *= 2;
         } else if (e.getKeyCode() == KeyEvent.VK_W) {
             Sort.globalWait /= 1.2;
         } else {

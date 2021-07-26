@@ -316,6 +316,7 @@ class Sort implements SortCondition {
 
         while (true) {
             auswahl = chooseFunktion();
+
             if (auswahl == 0) System.exit(0);
             s.chooseFeldGroesse(auswahl);
             if (auswahl == -1) continue;
