@@ -325,6 +325,7 @@ class Sort implements SortCondition {
             switch (auswahl) {
                 case 1:
                     s.bs = new BubbleSort(s.ds, s.bsWait);
+                    globalWait = s.bsWait;
                     s.messeZeit(auswahl);
                     s.ds.bs = s.bs;
                     s.ds.setTitle("Bubblesort" + s.erstelleUeberschrift());
@@ -335,6 +336,7 @@ class Sort implements SortCondition {
                     break;
                 case 2:
                     s.bks = new BucketSort(s.ds, s.bksWait);
+                    globalWait = s.bksWait;
                     s.messeZeit(auswahl);
                     s.ds.bks = s.bks;
                     s.ds.setTitle("Bucketsort (Countingsort)" + s.erstelleUeberschrift());
@@ -345,6 +347,7 @@ class Sort implements SortCondition {
                     break;
                 case 3:
                     s.hs = new HeapSort(s.ds, s.hsWait);
+                    globalWait = s.hsWait;
                     s.messeZeit(auswahl);
                     s.ds.hs = s.hs;
                     s.ds.setTitle("Heapsort" + s.erstelleUeberschrift());
@@ -355,6 +358,7 @@ class Sort implements SortCondition {
                     break;
                 case 4:
                     s.is = new InsertionSort(s.ds, s.isWait);
+                    globalWait = s.isWait;
                     s.messeZeit(auswahl);
                     s.ds.is = s.is;
                     s.ds.setTitle("Insertionsort" + s.erstelleUeberschrift());
@@ -365,6 +369,7 @@ class Sort implements SortCondition {
                     break;
                 case 5:
                     s.ms = new MergeSort(s.ds, s.msWait);
+                    globalWait = s.msWait;
                     s.messeZeit(auswahl);
                     s.ds.ms = s.ms;
                     s.ds.setTitle("Mergesort" + s.erstelleUeberschrift());
@@ -376,6 +381,7 @@ class Sort implements SortCondition {
                     break;
                 case 6:
                     s.qs = new QuickSort(s.ds, s.qsWait);
+                    globalWait = s.qsWait;
                     s.messeZeit(auswahl);
                     s.ds.qs = s.qs;
                     s.ds.setTitle("Quicksort" + s.erstelleUeberschrift());
@@ -387,6 +393,7 @@ class Sort implements SortCondition {
                     break;
                 case 7:
                     s.ses = new SelectionSort(s.ds, s.sesWait);
+                    globalWait = s.sesWait;
                     s.messeZeit(auswahl);
                     s.ds.ses = s.ses;
                     s.ds.setTitle("Selectionsort" + s.erstelleUeberschrift());
@@ -397,6 +404,7 @@ class Sort implements SortCondition {
                     break;
                 case 8:
                     s.shs = new ShellSort(s.ds, s.shsWait);
+                    globalWait = s.shsWait;
                     s.messeZeit(auswahl);
                     s.ds.shs = s.shs;
                     s.ds.setTitle("Shellsort" + s.erstelleUeberschrift());
@@ -407,6 +415,7 @@ class Sort implements SortCondition {
                     break;
                 case 9:
                     s.cs = new CocktailSort(s.ds, s.csWait);
+                    globalWait = s.csWait;
                     s.messeZeit(auswahl);
                     s.ds.cs = s.cs;
                     s.ds.setTitle("Cocktailsort" + s.erstelleUeberschrift());
@@ -417,6 +426,7 @@ class Sort implements SortCondition {
                     break;
                 case 10:
                     s.rs = new RadixSort(s.ds, s.rsWait);
+                    globalWait = s.rsWait;
                     s.messeZeit(auswahl);
                     s.ds.rs = s.rs;
                     s.ds.setTitle("Radixsort" + s.erstelleUeberschrift());
