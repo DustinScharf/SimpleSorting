@@ -132,7 +132,7 @@ class Sort implements SortCondition {
     private static byte chooseFunktion() {
 
         byte select;
-        System.out.println("\nWie wollen Sie sortieren?");
+        System.out.println("\nWählen Sie eine Funktion");
         System.out.println("===========================");
         System.out.println("1 -> Bubblesort");
         System.out.println("2 -> Bucketsort (Countingsort)");
@@ -298,14 +298,13 @@ class Sort implements SortCondition {
      */
     public static void main(String arg[]) {
 
-        System.out.println("=========================");
+        System.out.println("===========================");
         System.out.println("Willkommen bei SimpleSort");
-        System.out.println("=========================");
-        System.out.println("1. Wählen Sie einen Sortieralgorithmus");
-        System.out.println("2. Geben Sie eine beliebige Anzahl zu sortierender Elemente ein");
-        System.out.println("3. Starten/stoppen Sie die Animation mit SPACE");
-        System.out.println("4. Geschwindigkeit+ mit W");
-        System.out.println("5. Geschwindigkeit- mit Q");
+        System.out.println("===========================");
+        System.out.println("Anleitung:");
+        System.out.println("- Starten/stoppen mit SPACE");
+        System.out.println("- Geschwindigkeit+ mit W");
+        System.out.println("- Geschwindigkeit- mit Q");
 
         byte auswahl;
 
