@@ -69,7 +69,7 @@ public class MergeSort extends Ablauf {
         int pivot = (lo + hi) / 2;
         zeichne();
         try {
-            this.sleep(wait);
+            sleep(Sort.globalWait);
         } catch (InterruptedException e) {
             System.out.println(e.toString());
             setzeZurueck();
@@ -94,7 +94,7 @@ public class MergeSort extends Ablauf {
             if ((hi - lo) > 50) {
                 zeichne();
                 try {
-                    this.sleep(wait2);
+                    sleep(Sort.globalWait);
                 } catch (InterruptedException e) {
                     System.out.println(e.toString());
                     setzeZurueck();

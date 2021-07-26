@@ -71,6 +71,8 @@ class Sort implements SortCondition {
      */
     long zeit;
 
+    public static long globalWait = 100;
+
     /**
      * Implementierung der Funktion aus der Schnittstelle SortCondition,
      * vergleicht zwei Objekte nach ihrem Integer-Wert.
@@ -250,6 +252,15 @@ class Sort implements SortCondition {
      * Visualisierung.
      */
     public static void main(String arg[]) {
+
+        System.out.println("=========================");
+        System.out.println("Willkommen bei SimpleSort");
+        System.out.println("=========================");
+        System.out.println("1. Wählen Sie einen Sortieralgorithmus");
+        System.out.println("2. Geben Sie eine beliebige Anzahl zu sortierender Elemente ein");
+        System.out.println("3. Starten/stoppen Sie die Animation mit SPACE");
+        System.out.println("4. Geschwindigkeit+ mit W");
+        System.out.println("5. Geschwindigkeit- mit Q");
 
         byte auswahl;
 

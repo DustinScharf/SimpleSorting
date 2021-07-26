@@ -57,7 +57,7 @@ public class QuickSort extends Ablauf {
         int i;
         zeichne();
         try {
-            this.sleep(wait);
+            sleep(Sort.globalWait);
         } catch (InterruptedException e) {
             System.out.println(e.toString());
             setzeZurueck();

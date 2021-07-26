@@ -71,7 +71,7 @@ public class HeapSort extends Ablauf {
 
         zeichne();
         try {
-            this.sleep(wait);
+            sleep(Sort.globalWait);
         } catch (InterruptedException e) {
             System.out.println(e.toString());
             setzeZurueck();
@@ -82,7 +82,7 @@ public class HeapSort extends Ablauf {
             if (stopp == true) break;
             zeichne();
             try {
-                this.sleep(wait);
+                sleep(Sort.globalWait);
             } catch (InterruptedException e) {
                 System.out.println(e.toString());
                 setzeZurueck();
@@ -98,7 +98,7 @@ public class HeapSort extends Ablauf {
             if (stopp == true) break;
             zeichne();
             try {
-                this.sleep(wait);
+                sleep(Sort.globalWait);
             } catch (InterruptedException e) {
                 System.out.println(e.toString());
                 setzeZurueck();

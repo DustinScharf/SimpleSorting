@@ -100,7 +100,7 @@ public class BucketSort extends Ablauf {
                         sortiertesBucketArray[g] = new Integer(-1);
                         zeichne(zeichenBucketArray);
                         try {
-                            this.sleep(wait);
+                            sleep(Sort.globalWait);
                         } catch (InterruptedException e) {
                             System.out.println(e.toString());
                             setzeZurueck();

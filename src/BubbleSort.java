@@ -58,7 +58,7 @@ class BubbleSort extends Ablauf {
             if (stopp == true) break;
             zeichne();
             try {
-                this.sleep(wait);
+                sleep(Sort.globalWait);
             } catch (InterruptedException e) {
                 System.out.println(e.toString());
                 setzeZurueck();

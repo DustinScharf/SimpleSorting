@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 /**
  * Klasse beinhaltet die Cocktail Sort Implementierungen.
  *
@@ -76,7 +74,7 @@ class CocktailSort extends Ablauf {
             if (stopp) break;
             zeichne();
             try {
-                sleep(wait);
+                sleep(Sort.globalWait);
             } catch (InterruptedException e) {
                 System.out.println(e.toString());
                 setzeZurueck();

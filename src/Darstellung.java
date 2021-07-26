@@ -219,30 +219,34 @@ class Darstellung extends PufferDarstellung implements KeyListener {
      * ruft je nach Status der Visualisierung Steuerfunktionen auf
      */
     public void keyTyped(KeyEvent e) {
-
-        if (laeuft == true) {
-            halteSortierungAn();
-            laeuft = false;
-            //System.out.println("Sortierung angehalten...");
-        } else {
-            if (gestartet == false) {
-                starteSortierung();
-                gestartet = true;
-                laeuft = true;
-                //System.out.println("Sortierung wird gestartet...");
-            } else {
-                setzeSortierungFort();
-                laeuft = true;
-                //System.out.println("Sortierung laeuft...");
-            }
-        }
-
     }
 
     public void keyPressed(KeyEvent e) {
     }
 
     public void keyReleased(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_Q) {
+            Sort.globalWait *= 1.5;
+        } else if (e.getKeyCode() == KeyEvent.VK_W) {
+            Sort.globalWait /= 1.5;
+        } else {
+            if (laeuft) {
+                halteSortierungAn();
+                laeuft = false;
+                //System.out.println("Sortierung angehalten...");
+            } else {
+                if (!gestartet) {
+                    starteSortierung();
+                    gestartet = true;
+                    laeuft = true;
+                    //System.out.println("Sortierung wird gestartet...");
+                } else {
+                    setzeSortierungFort();
+                    laeuft = true;
+                    //System.out.println("Sortierung laeuft...");
+                }
+            }
+        }
     }
 
     /**
