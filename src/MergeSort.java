@@ -1,100 +1,105 @@
 // import SortCondition;
+
 import java.lang.*;
+
 /**
  * Klasse beinhaltet zwei verschiedene Mergesort-Implementierungen.
  *
+ * @author Jan Rudert
  * @version 1.0 04.02.01
- * @author	Jan Rudert
  */
-public class MergeSort extends Ablauf{
+public class MergeSort extends Ablauf {
 
- int lo;
- int hi;
- private long wait;
- private long wait2;
- /**
-  * @param ds - Referenz zu Darstellung fuer die Zeichnung
-  * @param wait - Verzoegerungszeit beim Zeichnen
-  */
- MergeSort(Darstellung ds,long wait){
-  this.ds = ds;
-  this.wait = wait;
-  this.wait2 = wait*10;
- }
- /**
-  * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
-  *
-  * @param sc - Schnittstelle SortCondition zum Vergleich von Elementen
-  * @param a - zu sortierendes Feld
-  * @param lo - erstes Element im Feld
-  * @param hi - letzes Element im feld
-  */
- public void totalMergeSort(SortCondition sc, Object a[], int lo, int hi){
-      if(lo == hi)return;
-      int length = hi-lo+1;
-      int pivot = (lo+hi) / 2;
-      totalMergeSort(sc,a, lo, pivot);
-      totalMergeSort(sc,a, pivot+1, hi);
-      Object working[] = new Object[length];
-      for(int i = 0; i < length; i++)working[i] = a[lo+i];
-      int m1 = 0;
-      int m2 = pivot-lo+1;
-      for(int i = 0; i < length; i++){
-        if(m2 <= hi-lo)
-            if(m1 <= pivot-lo)
-                if(sc.isGreaterThan(working[m2],working[m1]))a[i+lo] = working[m2++];
-                else a[i+lo] = working[m1++];
-            else a[i+lo] = working[m2++];
-        else  a[i+lo] = working[m1++];
-      }
-  }
-/**
- * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
- * zu zeichnen
- */
-  public void run()  {
-      zeichneMergeSort(sc,a,lo,hi);
-      setzeZurueck();
-      zeichne();
-  }
+    int lo;
+    int hi;
+    private long wait;
+    private long wait2;
 
-  private void zeichneMergeSort(SortCondition sc, Object a[], int lo, int hi){
-      if(lo == hi)return;
-      int length = hi-lo+1;
-      int pivot = (lo+hi) / 2;
-      zeichne();
-      try{
-        this.sleep(wait);
-      }catch(InterruptedException e){
-           System.out.println(e.toString());
-           setzeZurueck();
-         }
-      if (stopp != true){
-        zeichneMergeSort(sc,a, lo, pivot);
-        zeichneMergeSort(sc,a, pivot+1, hi);
+    /**
+     * @param ds   - Referenz zu Darstellung fuer die Zeichnung
+     * @param wait - Verzoegerungszeit beim Zeichnen
+     */
+    MergeSort(Darstellung ds, long wait) {
+        this.ds = ds;
+        this.wait = wait;
+        this.wait2 = wait * 10;
+    }
+
+    /**
+     * der "pure" Alghorithmus, aufgerufen um seine Laufzeit zu messen
+     *
+     * @param sc - Schnittstelle SortCondition zum Vergleich von Elementen
+     * @param a  - zu sortierendes Feld
+     * @param lo - erstes Element im Feld
+     * @param hi - letzes Element im feld
+     */
+    public void totalMergeSort(SortCondition sc, Object a[], int lo, int hi) {
+        if (lo == hi) return;
+        int length = hi - lo + 1;
+        int pivot = (lo + hi) / 2;
+        totalMergeSort(sc, a, lo, pivot);
+        totalMergeSort(sc, a, pivot + 1, hi);
         Object working[] = new Object[length];
-        for(int i = 0; i < length; i++) working[i] = a[lo+i];
+        for (int i = 0; i < length; i++) working[i] = a[lo + i];
         int m1 = 0;
-        int m2 = pivot-lo+1;
-        for(int i = 0; i < length; i++) {
-          if(m2 <= hi-lo)
-              if(m1 <= pivot-lo)
-                  if(sc.isGreaterThan(working[m2],working[m1]))
-			a[i+lo] = working[m2++];
-                  else a[i+lo] = working[m1++];
-              else a[i+lo] = working[m2++];
-          else a[i+lo] = working[m1++];
+        int m2 = pivot - lo + 1;
+        for (int i = 0; i < length; i++) {
+            if (m2 <= hi - lo)
+                if (m1 <= pivot - lo)
+                    if (sc.isGreaterThan(working[m2], working[m1])) a[i + lo] = working[m2++];
+                    else a[i + lo] = working[m1++];
+                else a[i + lo] = working[m2++];
+            else a[i + lo] = working[m1++];
         }
-       
-	if ((hi-lo)>50){
-	        zeichne();
-	        try{
-	          this.sleep(wait2);
- 	        }catch(InterruptedException e){
-	          System.out.println(e.toString());
-	          setzeZurueck();
-	          }
-	      }//if
-     }
-  }
+    }
+
+    /**
+     * Alghorithmus als run-Methode, um ihn steuerbar zu machen und um
+     * zu zeichnen
+     */
+    public void run() {
+        zeichneMergeSort(sc, a, lo, hi);
+        setzeZurueck();
+        zeichne();
+    }
+
+    private void zeichneMergeSort(SortCondition sc, Object a[], int lo, int hi) {
+        if (lo == hi) return;
+        int length = hi - lo + 1;
+        int pivot = (lo + hi) / 2;
+        zeichne();
+        try {
+            this.sleep(wait);
+        } catch (InterruptedException e) {
+            System.out.println(e.toString());
+            setzeZurueck();
+        }
+        if (stopp != true) {
+            zeichneMergeSort(sc, a, lo, pivot);
+            zeichneMergeSort(sc, a, pivot + 1, hi);
+            Object working[] = new Object[length];
+            for (int i = 0; i < length; i++) working[i] = a[lo + i];
+            int m1 = 0;
+            int m2 = pivot - lo + 1;
+            for (int i = 0; i < length; i++) {
+                if (m2 <= hi - lo)
+                    if (m1 <= pivot - lo)
+                        if (sc.isGreaterThan(working[m2], working[m1]))
+                            a[i + lo] = working[m2++];
+                        else a[i + lo] = working[m1++];
+                    else a[i + lo] = working[m2++];
+                else a[i + lo] = working[m1++];
+            }
+
+            if ((hi - lo) > 50) {
+                zeichne();
+                try {
+                    this.sleep(wait2);
+                } catch (InterruptedException e) {
+                    System.out.println(e.toString());
+                    setzeZurueck();
+                }
+            }//if
+        }
+    }
 }
