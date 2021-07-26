@@ -61,6 +61,8 @@ public class HeapSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int k;
         int l;
         Object t;

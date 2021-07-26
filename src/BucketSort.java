@@ -57,6 +57,8 @@ public class BucketSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         if (N <= 0) return;// Case of empty array
 
         Integer sortiertesBucketArray[] = new Integer[N];

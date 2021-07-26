@@ -308,7 +308,8 @@ class Sort implements SortCondition {
         System.out.println("Willkommen bei SimpleSort");
         System.out.println("===========================");
         System.out.println("Anleitung:");
-        System.out.println("- Starten/stoppen mit SPACE");
+        System.out.println("- Start mit 2x SPACE");
+        System.out.println("- Play/Pause mit SPACE");
         System.out.println("- Geschwindigkeit+ mit W");
         System.out.println("- Geschwindigkeit- mit Q");
 

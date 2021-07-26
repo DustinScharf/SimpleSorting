@@ -57,6 +57,8 @@ public class SelectionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int i, j, min;
         Object elem;
         for (i = 0; i < n - 1; i++) {

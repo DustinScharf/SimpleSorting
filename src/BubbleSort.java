@@ -52,6 +52,8 @@ class BubbleSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int i, j;
         Object temp;
         for (i = n - 1; i >= 0; i--) {

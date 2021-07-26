@@ -85,6 +85,8 @@ class RadixSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int longestNumbersDigits = 0;
         for (Object o : a) {
             int currentNumberDigits = (int) (Math.log10((Integer) o) + 1);

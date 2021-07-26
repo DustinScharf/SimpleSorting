@@ -51,6 +51,8 @@ public class InsertionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int i, j;
         Object elem;
         for (i = 1; i < n; i++) {

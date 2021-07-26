@@ -65,6 +65,8 @@ public class ShellSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        suspend();
+
         int i, j, delta;
         Object elem;
         delta = 1;
