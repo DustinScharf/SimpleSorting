@@ -115,7 +115,7 @@ class Sort implements SortCondition {
         System.out.println("\nWie wollen Sie sortieren?");
         System.out.println("===========================");
         System.out.println("1 -> Bubblesort");
-        System.out.println("2 -> Bucketsort");
+        System.out.println("2 -> Bucketsort (Countingsort)");
         System.out.println("3 -> Heapsort");
         System.out.println("4 -> Insertionsort");
         System.out.println("5 -> Mergesort");
@@ -302,7 +302,7 @@ class Sort implements SortCondition {
                     s.bks = new BucketSort(s.ds, s.bksWait);
                     s.messeZeit(auswahl);
                     s.ds.bks = s.bks;
-                    s.ds.setTitle("Bucketsort" + s.erstelleUeberschrift());
+                    s.ds.setTitle("Bucketsort (Countingsort)" + s.erstelleUeberschrift());
                     s.ds.repaint();
                     s.bks.sc = s;
                     s.bks.a = (Object[]) s.zeichintarr;
