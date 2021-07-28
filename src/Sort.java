@@ -72,7 +72,7 @@ class Sort implements SortCondition {
     /**
      * Verzögerungszeit bei Visualisierung von Radix Sort
      */
-    long rsWait = 200;
+    long rsWait = 25;
 
     /**
      * Originalarray des Sortierfeldes
