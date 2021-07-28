@@ -116,16 +116,16 @@ class RadixSort extends Ablauf {
 
             int insertPosition = 0;
             for (int i = 0; i < 10; ++i) {
-                if (stopp) break;
-                zeichne();
-                try {
-                    sleep(Sort.globalWait);
-                } catch (InterruptedException e) {
-                    System.out.println(e.toString());
-                    setzeZurueck();
-                }
                 while (!digitBuckets[i].isEmpty()) {
                     a[insertPosition++] = digitBuckets[i].remove();
+                    if (stopp) break;
+                    zeichne();
+                    try {
+                        sleep(Sort.globalWait);
+                    } catch (InterruptedException e) {
+                        System.out.println(e.toString());
+                        setzeZurueck();
+                    }
                 }
             }
         }
