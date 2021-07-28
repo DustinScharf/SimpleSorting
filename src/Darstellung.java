@@ -241,9 +241,9 @@ class Darstellung extends PufferDarstellung implements KeyListener {
 
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_Q) {
-            Sort.globalWait *= 2;
+            Sort.globalWait = 2 * (Sort.globalWait + 1);
         } else if (e.getKeyCode() == KeyEvent.VK_W) {
-            Sort.globalWait /= 1.2;
+            Sort.globalWait = (long) Math.max(1, Sort.globalWait / 1.2);
         } else {
             startStop();
         }
@@ -309,6 +309,20 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                             (int) ((skalenEinheitY * zeichintarr.length) - bucketintarr[j] * skalenEinheitY + 2));
                 }
             }
+        }
+        if (fertig) {
+            if (Sort.colorMode) {
+                g.setColor(new Color(200,0,180));
+            } else {
+                if (Sort.darkMode) {
+                    g.setColor(Color.white);
+                } else {
+                    g.setColor(Color.black);
+                }
+            }
+            g.setFont(new Font("Helvetica", Font.PLAIN, 18));
+            g.drawString("Done",12,48);
+            g.drawRect(0,0,60,55);
         }
     }
 

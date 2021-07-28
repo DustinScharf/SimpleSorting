@@ -58,6 +58,9 @@ public class MergeSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -65,6 +68,8 @@ public class MergeSort extends Ablauf {
         Sort.init = true;
 
         zeichneMergeSort(sc, a, lo, hi);
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }

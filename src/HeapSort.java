@@ -61,6 +61,9 @@ public class HeapSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -110,6 +113,8 @@ public class HeapSort extends Ablauf {
                 setzeZurueck();
             }
         } while (m > 0);
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }

@@ -67,6 +67,9 @@ class CocktailSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -112,6 +115,8 @@ class CocktailSort extends Ablauf {
                 break;
             }
         }
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }

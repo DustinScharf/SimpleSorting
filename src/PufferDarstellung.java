@@ -26,7 +26,7 @@ class PufferDarstellung extends Frame {
         dbGraphics.fillRect(0, 0, this.getSize().width, this.getSize().height);
 
         //Vordergrund zeichnen
-        dbGraphics.setColor(Color.blue);
+        dbGraphics.setColor(Color.orange);
         paint(dbGraphics);
         //Offscreen anzeigen
         g.drawImage(dbImage, 0, 0, this);

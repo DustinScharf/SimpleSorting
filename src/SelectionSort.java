@@ -57,6 +57,9 @@ public class SelectionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -82,6 +85,8 @@ public class SelectionSort extends Ablauf {
             a[min] = a[i];
             a[i] = elem;
         } // for
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     } // run()

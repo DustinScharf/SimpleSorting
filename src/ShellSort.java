@@ -65,6 +65,9 @@ public class ShellSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -99,6 +102,8 @@ public class ShellSort extends Ablauf {
                 a[j] = elem;
             }
         } while (delta > 1);
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }

@@ -57,6 +57,9 @@ public class BucketSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -116,6 +119,8 @@ public class BucketSort extends Ablauf {
             }
             if (stopp == true) break;
         }
+
+        ds.fertig = true;
         setzeZurueck();
     }
 

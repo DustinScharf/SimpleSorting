@@ -51,6 +51,9 @@ public class InsertionSort extends Ablauf {
      * zu zeichnen
      */
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -78,6 +81,8 @@ public class InsertionSort extends Ablauf {
             }
             a[j] = elem;
         }
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }

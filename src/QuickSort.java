@@ -45,6 +45,9 @@ public class QuickSort extends Ablauf {
      */
 
     public void run() {
+        ds.fertig = false;
+        zeichne();
+
         if (Sort.init) {
             ds.laeuft = false;
             suspend();
@@ -52,6 +55,8 @@ public class QuickSort extends Ablauf {
         Sort.init = true;
 
         zeichneQuickSortRekursiv(sc, a, 0, a.length - 1);
+
+        ds.fertig = true;
         setzeZurueck();
         zeichne();
     }
