@@ -7,7 +7,7 @@ Ein Visualisierer für Sortieralgorithmen.
 3. Befehl `java -jar SimpleSorting.jar` ins Terminal eintippen
 
 ## Anleitung
-1. Ausführen (siehe [Installation / Ausführung](#Installation-/-Ausführung))
+1. Ausführen (siehe [Installation / Ausführung](#Installation--Ausführung))
 2. Einstellungen vornehmen
    ```
    -1 -> Anzahl Sortierelemente aendern (Default: 1000)
