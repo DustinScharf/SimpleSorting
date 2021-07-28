@@ -170,7 +170,7 @@ class Sort implements SortCondition {
                 darkMode = !darkMode;
             } else if (sel.equals("-1")) {
                 System.out.println("\nWie viele Elemente sollen sortiert werden? (Max. 1_000_000)");
-                System.out.println("*groessere Werte können zu Anzeigefehlern fuehren");
+                System.out.println("*groessere Werte koennen zu Anzeigefehlern fuehren");
                 String l = erfasse();
                 Integer s = new Integer(l);
                 elementAnzahl = s.intValue();
@@ -178,7 +178,7 @@ class Sort implements SortCondition {
                     System.out.println("der arme Rechner.....");
                 }
             } else {
-                System.out.println("Bitte eine der gegebenen Moeglichkeiten auswählen!");
+                System.out.println("Bitte eine der gegebenen Moeglichkeiten auswaehlen!");
             }
             return chooseFunktion();
         }
@@ -195,7 +195,7 @@ class Sort implements SortCondition {
         try {
             if (auswahl == -1) {
                 System.out.println("\nWie viele Elemente sollen sortiert werden? (Max. 1_000_000)");
-                System.out.println("*groessere Werte können zu Anzeigefehlern fuehren");
+                System.out.println("*groessere Werte koennen zu Anzeigefehlern fuehren");
                 String l = erfasse();
                 Integer s = new Integer(l);
                 elementAnzahl = s.intValue();
