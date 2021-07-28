@@ -135,7 +135,7 @@ class Sort implements SortCondition {
     private static byte chooseFunktion() {
 
         byte select;
-        System.out.println("\nWählen Sie eine Funktion");
+        System.out.println("\nWaehlen Sie eine Funktion");
         System.out.println("===========================");
         System.out.println("1 -> Bubblesort");
         System.out.println("2 -> Bucketsort (Countingsort)");
@@ -148,7 +148,7 @@ class Sort implements SortCondition {
         System.out.println("9 -> Cocktailsort");
         System.out.println("10 -> Radixsort");
         System.out.println("===========================");
-        System.out.println("-1 -> Anzahl Sortierelemente ändern (" + elementAnzahl + ")");
+        System.out.println("-1 -> Anzahl Sortierelemente aendern (" + elementAnzahl + ")");
         System.out.println("-2 -> Farbmodus " + (colorMode ? "de" : "") + "aktivieren " +
                 "(" + (colorMode ? "an" : "aus") + ")");
         System.out.println("-3 -> Darkmode " + (darkMode ? "de" : "") + "aktivieren " +
@@ -170,7 +170,7 @@ class Sort implements SortCondition {
                 darkMode = !darkMode;
             } else if (sel.equals("-1")) {
                 System.out.println("\nWie viele Elemente sollen sortiert werden? (Max. 1_000_000)");
-                System.out.println("*größere Werte können zu Anzeigefehlern führen");
+                System.out.println("*groessere Werte können zu Anzeigefehlern fuehren");
                 String l = erfasse();
                 Integer s = new Integer(l);
                 elementAnzahl = s.intValue();
@@ -178,7 +178,7 @@ class Sort implements SortCondition {
                     System.out.println("der arme Rechner.....");
                 }
             } else {
-                System.out.println("Bitte eine der gegebenen Möglichkeiten auswählen!");
+                System.out.println("Bitte eine der gegebenen Moeglichkeiten auswählen!");
             }
             return chooseFunktion();
         }
@@ -195,7 +195,7 @@ class Sort implements SortCondition {
         try {
             if (auswahl == -1) {
                 System.out.println("\nWie viele Elemente sollen sortiert werden? (Max. 1_000_000)");
-                System.out.println("*größere Werte können zu Anzeigefehlern führen");
+                System.out.println("*groessere Werte können zu Anzeigefehlern fuehren");
                 String l = erfasse();
                 Integer s = new Integer(l);
                 elementAnzahl = s.intValue();
