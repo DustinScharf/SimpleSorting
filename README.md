@@ -39,7 +39,7 @@ Ein Visualisierer für Sortieralgorithmen.
 In dem Repo sind auch 2 PDFs, in welchen ich versucht habe,
 einige Sortieralgorithmen leicht und kurz zu erklären.
 Immer mit Beispiel und Laufzeit bei verschiedenen Eingaben.<br>
-Bitte bei Fehlern melden oder direkt in der ``Sorting_Algorithms_Vektorgrafik.drwaio`` (XML) verändern.
+Bitte bei Fehlern melden oder direkt in der ``Sorting_Algorithms_VectorGraphic.drwaio`` (XML) verändern.
 
 <hr>
 Die Quelldateien wurden 2001 geschrieben und sind daher veraltet.<br>
