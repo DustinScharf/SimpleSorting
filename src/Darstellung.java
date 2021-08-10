@@ -80,28 +80,28 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                 bks.start();
                 break;
             case 3:
-                hs.start();
-                break;
-            case 4:
-                is.start();
-                break;
-            case 5:
-                ms.start();
-                break;
-            case 6:
-                qs.start();
-                break;
-            case 7:
-                ses.start();
-                break;
-            case 8:
-                shs.start();
-                break;
-            case 9:
                 cs.start();
                 break;
-            case 10:
+            case 4:
+                hs.start();
+                break;
+            case 5:
+                is.start();
+                break;
+            case 6:
+                ms.start();
+                break;
+            case 7:
+                qs.start();
+                break;
+            case 8:
                 rs.start();
+                break;
+            case 9:
+                ses.start();
+                break;
+            case 10:
+                shs.start();
                 break;
         }
     }
@@ -118,28 +118,28 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                 bks.suspend();
                 break;
             case 3:
-                hs.suspend();
-                break;
-            case 4:
-                is.suspend();
-                break;
-            case 5:
-                ms.suspend();
-                break;
-            case 6:
-                qs.suspend();
-                break;
-            case 7:
-                ses.suspend();
-                break;
-            case 8:
-                shs.suspend();
-                break;
-            case 9:
                 cs.suspend();
                 break;
-            case 10:
+            case 4:
+                hs.suspend();
+                break;
+            case 5:
+                is.suspend();
+                break;
+            case 66:
+                ms.suspend();
+                break;
+            case 7:
+                qs.suspend();
+                break;
+            case 8:
                 rs.suspend();
+                break;
+            case 9:
+                ses.suspend();
+                break;
+            case 10:
+                shs.suspend();
                 break;
         }
     }
@@ -156,28 +156,28 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                 bks.resume();
                 break;
             case 3:
-                hs.resume();
-                break;
-            case 4:
-                is.resume();
-                break;
-            case 5:
-                ms.resume();
-                break;
-            case 6:
-                qs.resume();
-                break;
-            case 7:
-                ses.resume();
-                break;
-            case 8:
-                shs.resume();
-                break;
-            case 9:
                 cs.resume();
                 break;
-            case 10:
+            case 4:
+                hs.resume();
+                break;
+            case 5:
+                is.resume();
+                break;
+            case 6:
+                ms.resume();
+                break;
+            case 7:
+                qs.resume();
+                break;
+            case 8:
                 rs.resume();
+                break;
+            case 9:
+                ses.resume();
+                break;
+            case 10:
+                shs.resume();
                 break;
         }
     }
@@ -196,36 +196,36 @@ class Darstellung extends PufferDarstellung implements KeyListener {
                 bks.stopp = true;
                 break;
             case 3:
-                hs.resume();
-                hs.stopp = true;
-                break;
-            case 4:
-                is.resume();
-                is.stopp = true;
-                break;
-            case 5:
-                ms.resume();
-                ms.stopp = true;
-                break;
-            case 6:
-                qs.resume();
-                qs.stopp = true;
-                break;
-            case 7:
-                ses.resume();
-                ses.stopp = true;
-                break;
-            case 8:
-                shs.resume();
-                shs.stopp = true;
-                break;
-            case 9:
                 cs.resume();
                 cs.stopp = true;
                 break;
-            case 10:
+            case 4:
+                hs.resume();
+                hs.stopp = true;
+                break;
+            case 5:
+                is.resume();
+                is.stopp = true;
+                break;
+            case 6:
+                ms.resume();
+                ms.stopp = true;
+                break;
+            case 7:
+                qs.resume();
+                qs.stopp = true;
+                break;
+            case 8:
                 rs.resume();
                 rs.stopp = true;
+                break;
+            case 9:
+                ses.resume();
+                ses.stopp = true;
+                break;
+            case 10:
+                shs.resume();
+                shs.stopp = true;
                 break;
         }
     }

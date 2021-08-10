@@ -139,14 +139,14 @@ class Sort implements SortCondition {
         System.out.println("===========================");
         System.out.println("1 -> Bubblesort");
         System.out.println("2 -> Bucketsort (Countingsort)");
-        System.out.println("3 -> Heapsort");
-        System.out.println("4 -> Insertionsort");
-        System.out.println("5 -> Mergesort");
-        System.out.println("6 -> Quicksort");
-        System.out.println("7 -> Selectionsort");
-        System.out.println("8 -> Shellsort");
-        System.out.println("9 -> Cocktailsort");
-        System.out.println("10 -> Radixsort");
+        System.out.println("3 -> Cocktailsort");
+        System.out.println("4 -> Heapsort");
+        System.out.println("5 -> Insertionsort");
+        System.out.println("6 -> Mergesort");
+        System.out.println("7 -> Quicksort");
+        System.out.println("8 -> Radixsort");
+        System.out.println("9 -> Selectionsort");
+        System.out.println("10 -> Shellsort");
         System.out.println("===========================");
         System.out.println("-1 -> Anzahl Sortierelemente aendern (" + elementAnzahl + ")");
         System.out.println("-2 -> Farbmodus " + (colorMode ? "de" : "") + "aktivieren " +
@@ -241,42 +241,42 @@ class Sort implements SortCondition {
                 break;
             case 3:
                 zeit = System.currentTimeMillis();
-                hs.totalHeapSort(this, (Object[]) intarr, (int) intarr.length);
+                cs.totalCocktailSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 4:
                 zeit = System.currentTimeMillis();
-                is.totalInsertionSort(this, (Object[]) intarr, (int) intarr.length);
+                hs.totalHeapSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 5:
                 zeit = System.currentTimeMillis();
-                ms.totalMergeSort(this, (Object[]) intarr, 1, (int) (intarr.length - 1));
+                is.totalInsertionSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 6:
                 zeit = System.currentTimeMillis();
-                qs.totalQuickSortRekursiv(this, (Object[]) intarr, 0, (int) intarr.length - 1);
+                ms.totalMergeSort(this, (Object[]) intarr, 1, (int) (intarr.length - 1));
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 7:
                 zeit = System.currentTimeMillis();
-                ses.totalSelectionSort(this, (Object[]) intarr, (int) intarr.length);
+                qs.totalQuickSortRekursiv(this, (Object[]) intarr, 0, (int) intarr.length - 1);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 8:
                 zeit = System.currentTimeMillis();
-                shs.totalShellSort(this, (Object[]) intarr, (int) intarr.length);
+                rs.totalRadixSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 9:
                 zeit = System.currentTimeMillis();
-                cs.totalCocktailSort(this, (Object[]) intarr, (int) intarr.length);
+                ses.totalSelectionSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
             case 10:
                 zeit = System.currentTimeMillis();
-                rs.totalRadixSort(this, (Object[]) intarr, (int) intarr.length);
+                shs.totalShellSort(this, (Object[]) intarr, (int) intarr.length);
                 zeit = System.currentTimeMillis() - zeit;
                 break;
         }
@@ -362,6 +362,17 @@ class Sort implements SortCondition {
                     s.bks.N = (int) s.zeichintarr.length;
                     break;
                 case 3:
+                    s.cs = new CocktailSort(s.ds, s.csWait);
+                    globalWait = s.csWait;
+                    s.messeZeit(auswahl);
+                    s.ds.cs = s.cs;
+                    s.ds.setTitle("Cocktailsort" + s.erstelleUeberschrift());
+                    s.ds.repaint();
+                    s.cs.sc = s;
+                    s.cs.a = (Object[]) s.zeichintarr;
+                    s.cs.n = (int) s.zeichintarr.length;
+                    break;
+                case 4:
                     s.hs = new HeapSort(s.ds, s.hsWait);
                     globalWait = s.hsWait;
                     s.messeZeit(auswahl);
@@ -372,7 +383,7 @@ class Sort implements SortCondition {
                     s.hs.a = (Object[]) s.zeichintarr;
                     s.hs.anz = (int) s.zeichintarr.length;
                     break;
-                case 4:
+                case 5:
                     s.is = new InsertionSort(s.ds, s.isWait);
                     globalWait = s.isWait;
                     s.messeZeit(auswahl);
@@ -383,7 +394,7 @@ class Sort implements SortCondition {
                     s.is.a = (Object[]) s.zeichintarr;
                     s.is.n = (int) s.zeichintarr.length;
                     break;
-                case 5:
+                case 6:
                     s.ms = new MergeSort(s.ds, s.msWait);
                     globalWait = s.msWait;
                     s.messeZeit(auswahl);
@@ -395,7 +406,7 @@ class Sort implements SortCondition {
                     s.ms.lo = 1;
                     s.ms.hi = (int) (s.zeichintarr.length - 1);
                     break;
-                case 6:
+                case 7:
                     s.qs = new QuickSort(s.ds, s.qsWait);
                     globalWait = s.qsWait;
                     s.messeZeit(auswahl);
@@ -407,7 +418,18 @@ class Sort implements SortCondition {
                     s.qs.l = 0;
                     s.qs.r = (int) s.zeichintarr.length - 1;
                     break;
-                case 7:
+                case 8:
+                    s.rs = new RadixSort(s.ds, s.rsWait);
+                    globalWait = s.rsWait;
+                    s.messeZeit(auswahl);
+                    s.ds.rs = s.rs;
+                    s.ds.setTitle("Radixsort" + s.erstelleUeberschrift());
+                    s.ds.repaint();
+                    s.rs.sc = s;
+                    s.rs.a = (Object[]) s.zeichintarr;
+                    s.rs.n = (int) s.zeichintarr.length;
+                    break;
+                case 9:
                     s.ses = new SelectionSort(s.ds, s.sesWait);
                     globalWait = s.sesWait;
                     s.messeZeit(auswahl);
@@ -418,7 +440,7 @@ class Sort implements SortCondition {
                     s.ses.a = (Object[]) s.zeichintarr;
                     s.ses.n = (int) s.zeichintarr.length;
                     break;
-                case 8:
+                case 10:
                     s.shs = new ShellSort(s.ds, s.shsWait);
                     globalWait = s.shsWait;
                     s.messeZeit(auswahl);
@@ -428,28 +450,6 @@ class Sort implements SortCondition {
                     s.shs.sc = s;
                     s.shs.a = (Object[]) s.zeichintarr;
                     s.shs.n = (int) s.zeichintarr.length;
-                    break;
-                case 9:
-                    s.cs = new CocktailSort(s.ds, s.csWait);
-                    globalWait = s.csWait;
-                    s.messeZeit(auswahl);
-                    s.ds.cs = s.cs;
-                    s.ds.setTitle("Cocktailsort" + s.erstelleUeberschrift());
-                    s.ds.repaint();
-                    s.cs.sc = s;
-                    s.cs.a = (Object[]) s.zeichintarr;
-                    s.cs.n = (int) s.zeichintarr.length;
-                    break;
-                case 10:
-                    s.rs = new RadixSort(s.ds, s.rsWait);
-                    globalWait = s.rsWait;
-                    s.messeZeit(auswahl);
-                    s.ds.rs = s.rs;
-                    s.ds.setTitle("Radixsort" + s.erstelleUeberschrift());
-                    s.ds.repaint();
-                    s.rs.sc = s;
-                    s.rs.a = (Object[]) s.zeichintarr;
-                    s.rs.n = (int) s.zeichintarr.length;
                     break;
             }
         }
