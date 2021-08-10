@@ -10,22 +10,22 @@ Ein Visualisierer für Sortieralgorithmen.
 1. Ausführen (siehe [Installation / Ausführung](#Installation--Ausführung))
 2. Einstellungen vornehmen
    ```
-   -1 -> Anzahl Sortierelemente aendern (Default: 1000)
-   -2 -> Farbmodus deaktivieren (Default: an)
-   -3 -> Darkmode aktivieren (Default: aus)
+   -1 -> Anzahl Sortierelemente aendern (default: 1000)
+   -2 -> toggle Farbmodus (default: an)
+   -3 -> toggle Darkmode (default: aus)
    ```
 3. Sortieralgorithmus wählen
    ```
    1 -> Bubblesort
    2 -> Bucketsort (Countingsort)
-   3 -> Heapsort
-   4 -> Insertionsort
-   5 -> Mergesort
-   6 -> Quicksort
-   7 -> Selectionsort
-   8 -> Shellsort
-   9 -> Cocktailsort
-   10 -> Radixsort
+   3 -> Cocktailsort
+   4 -> Heapsort
+   5 -> Insertionsort
+   6 -> Mergesort
+   7 -> Quicksort
+   8 -> Radixsort
+   9 -> Selectionsort
+   10 -> Shellsort
    ```
 4. Visualisierung steuern
    ```
