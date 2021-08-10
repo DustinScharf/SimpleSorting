@@ -150,9 +150,9 @@ class Sort implements SortCondition {
         System.out.println("===========================");
         System.out.println("-1 -> Anzahl Sortierelemente aendern (" + elementAnzahl + ")");
         System.out.println("-2 -> Farbmodus " + (colorMode ? "de" : "") + "aktivieren " +
-                "(" + (colorMode ? "an" : "aus") + ")");
+                "(momentan " + (colorMode ? "an" : "aus") + ")");
         System.out.println("-3 -> Darkmode " + (darkMode ? "de" : "") + "aktivieren " +
-                "(" + (darkMode ? "an" : "aus") + ")");
+                "(momentan " + (darkMode ? "an" : "aus") + ")");
         System.out.println("===========================");
         System.out.println("0 -> Beenden");
         System.out.println("===========================");
