@@ -4,8 +4,8 @@ Ein Visualisierer für Sortieralgorithmen.
 
 ## Installation + Ausführung
 1. `SimpleSorting.jar` aus dem **build Directory** oder rechts bei **Releases** herunterladen
-2. Terminal/Cmd im Directory mit `SimpleSorting.jar` öffnen
-3. Befehl `java -jar SimpleSorting.jar` ins Terminal/Cmd eingeben
+2. Terminal (or Cmd) im Directory mit `SimpleSorting.jar` öffnen
+3. Befehl `java -jar SimpleSorting.jar` ins Terminal (or Cmd) eingeben
 
 ## Anleitung
 1. Ausführen (siehe [Installation / Ausführung](#Installation--Ausführung))
