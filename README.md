@@ -44,7 +44,7 @@ Bitte bei Fehlern melden oder direkt in der ``Sorting_Algorithms_VectorGraphic.d
 
 <hr>
 Die Quelldateien wurden 2001 geschrieben und sind daher veraltet.<br>
-Der Code entspricht keiner modernen Convention und ist schwer zu lesen/debuggen.<br>
+Der Code folgt keiner modernen Convention und ist schwer zu lesen/debuggen.<br>
 Die Visualisierung ist dennoch sehr schön und die Ausführung simpel.
 <hr>
 Das Projekt wurde ursprünglich und größtenteils von Jan Rudert erstellt.
