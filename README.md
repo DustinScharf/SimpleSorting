@@ -9,7 +9,7 @@ Ein Visualisierer für Sortieralgorithmen.
 
 ## Anleitung
 1. Ausführen (siehe [Installation / Ausführung](#Installation--Ausführung))
-2. Einstellungen vornehmen
+2. Einstellungen vornehmen (Zahl eintippen und Enter drücken)
    ```
    -1 -> Anzahl Sortierelemente aendern (default: 1000)
    -2 -> toggle Farbmodus (default: an)
