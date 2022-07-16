@@ -1,6 +1,6 @@
 # SimpleSorting
 ![Demo GIF could not load, download the program to run it by yourself](demo.gif)  
-Ein Visualisierer für Sortieralgorithmen.
+Ein Visualisierer für Sortieralgorithmen (in Java).
 
 ## Installation + Ausführung
 1. [**SimpleSorting**.jar](https://github.com/DustinScharf/SimpleSorting/releases/download/v1.11/SimpleSorting.jar "Click here to download SimpleSorting") aus dem **build Directory** oder rechts bei **Releases** herunterladen
