@@ -1,5 +1,5 @@
 # SimpleSorting
-![Demo GIF could not load, download the program to run it by yourself](demo.gif)  
+![Demo GIF](demo.gif)  
 Ein Visualisierer für Sortieralgorithmen (in Java).
 
 ## Installation + Ausführung
