@@ -1,4 +1,4 @@
-# SimpleSorting
+# SimpleSorting (GER)
 ![Demo GIF](demo.gif)  
 Ein Visualisierer für Sortieralgorithmen (in Java).
 
