@@ -34,7 +34,7 @@ Ein Visualisierer für Sortieralgorithmen (in Java).
    - Geschwindigkeit+ mit W
    - Geschwindigkeit- mit Q
    ```
-5. Anzeigefenster schließen und neuen Algorithmus im Terminal auswählen oder mit `0` beenden
+5. Anzeigefenster schließen und neuen Algorithmus im Terminal auswählen oder mit `0` beenden.
 
 ### Noch etwas
 In dem Repo sind auch 2 PDFs, in welchen ich versucht habe,
